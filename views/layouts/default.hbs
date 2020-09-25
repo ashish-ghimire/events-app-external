@@ -6,20 +6,47 @@
   <title>Team [TEAM NAME] Website</title>
   <meta name="HandheldFriendly" content="True" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<style>
+    .square {
+    height: 50px;
+    width: px;
+    background-color: DodgerBlue;
+    }
+    .square2 {
+    height: 50px;
+    width: px;
+    background-color: Tomato;
+    }
+    .square3 {
+    height: 200px;
+    width: px;
+    background-color: lightgrey;
+    }
+    .square4 {
+    height: 200px;
+    width: px;
+    background-color: aqua;
+    }
+</style>
 </head>
 <body>
-  <div>
-      <h1>Welcome to New team application</h1>
-    {{{body}}}
-</div>
-<div>
-  <h2>Add an event</h2>
+<div class="square">
+  <h1 style="color: white">Welcome to New team application</h1>
+ </div>
+ <div class="square2">
+  <h1 style="color: white">Event List</h1>
+ </div>
+ <div style="width:;height:400px;line-height:3em;overflow:scroll;padding:5px;background-color:#FCFADD;color:#714D03;border:4px double #DEBB07;">
+{{{body}}}
+ </div>
+<div class="square4">
+    <h2>Add an event</h2>
     <form action="/event" method="post">
-       title: <input name="title" type="text" /> <br />
-       description: <input name="description" type="text" /> <br />
-       <br />
-        <input type="submit" name="submit" value="submit" />
+       title: <input name="title" type="text"> <br>
+       description: <input name="description" type="text"> <br>
+       comment: <input name="comment" type="text"> <br>
+       <br>
+        <input name="submit" type="submit" value="submit">
     </form>
-  </div>
+</div>
 </body>
-</html>
