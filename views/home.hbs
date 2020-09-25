@@ -1,19 +1,38 @@
-<ul >
+<style>
+td, th {
+  border: 1px solid #ffbf00;
+  text-align: left;
+  height: 15px;
+  width: 20%;
+}
+</style>
+<table style="width:80%">
+        <tr>
+            <th style="">Title</th>
+            <th>Description</th> 
+            <th>Comment</th>
+            <th> Like </th>
+        </tr>
+</table>
   {{#events}}
     <li>
-        <h2>{{ title }}</h2>
-        <p>{{ description }}</p>
-        <p>{{ comment }}</p>
-        <p>Likes: {{ likes }}
-        <form method="POST" action="/event/like">
-        <input type="hidden" value="{{id}}" name="id">
-        <input type="submit" value="Like">
-        </form>
-        <form method="POST" action="/event/unlike">
-        <input type="hidden" value="{{id}}" name="id">
-        <input type="submit" value="UN-Like">
-        </form>
-        </p>
+        <table style="width:80%">
+        <tr>
+            <td>{{ title }}</td>
+            <td>{{ description }}</td>
+            <td>{{ comment }}</td>
+            <Td> Likes: {{ likes }}
+                <form method="POST" action="/event/like">
+                <input type="hidden" value="{{id}}" name="id">
+                <input type="submit" value="Like">
+                </form>
+                <form method="POST" action="/event/unlike">
+                <input type="hidden" value="{{id}}" name="id">
+                <input type="submit" value="UN-Like">
+                </form>
+            </td>
+        </tr>
+        </table>
+        
     </li>
   {{/events}}
-</ul>
